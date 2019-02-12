@@ -3,12 +3,13 @@ Robot Framework from sublime is a autocompletion plugin for Sublime Text 3
 """
 import sys
 import os
+sys.path.append('.')
+sys.path.append(os.path.dirname(__file__))
 from string import Template
 from .commands import *
 
 if sys.version_info < (3, 3):
     raise RuntimeError('Plugin only works with Sublime Text 3')
-
 
 def plugin_loaded():
     package_folder = os.path.dirname(__file__)

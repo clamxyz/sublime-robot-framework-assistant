@@ -24,6 +24,7 @@ def index_popen_arg_parser(mode):
     arg_list.append('--module_search_path')
     for module in get_setting(SettingObject.module_search_path):
         arg_list.append(module)
+    print(' '.join(arg_list))
     return arg_list
 
 
